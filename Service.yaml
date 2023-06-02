@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: awan
+  labels:
+    app: awan
+spec:
+  ports:
+    - port: 8080
+      targetPort: 80
+      nodePort: 31113
+  selector:
+    app: awan
+  type: LoadBalancer
